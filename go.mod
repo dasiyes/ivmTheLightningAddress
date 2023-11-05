@@ -1,4 +1,4 @@
-module github/dasiyes/ivmtla
+module github.com/dasiyes/ivmtla
 
 go 1.21.3
 

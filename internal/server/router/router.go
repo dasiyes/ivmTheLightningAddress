@@ -23,9 +23,12 @@ func (h *srvHandler) router() chi.Router {
 
 	// Route the home calls
 	rtr.Route("/", func(r chi.Router) {
-		lgr := log.New(os.Stdout, "[http-srv-root-hdlr] ", log.LstdFlags)
+		lgr := log.New(os.Stdout, "[root-hdlr] ", log.LstdFlags)
 		rh := rootHandler{lgr}
+		lgr2 := log.New(os.Stdout, "[pmn-hdlr] ", log.LstdFlags)
+		ph := pmnHandler{lgr2}
 		r.Mount("/", rh.router())
+		r.Mount("/.well-known", ph.router())
 	})
 
 	return rtr

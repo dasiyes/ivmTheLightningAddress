@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github/dasiyes/ivmtla/internal/server"
-	"github/dasiyes/ivmtla/internal/server/router"
+	"github.com/dasiyes/ivmtla/internal/server"
+	"github.com/dasiyes/ivmtla/internal/server/router"
 )
 
 func main() {
