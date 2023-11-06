@@ -55,6 +55,9 @@ func (l *LAResponse) BuildRespponse(user string) (map[string]interface{}, error)
 	// if the user is not valid, return an error response
 	// return nil, fmt.Errorf("user %s is not valid", user)
 
+	al := LndServices.NodeAlias
+	fmt.Printf("alias: %s\n", al)
+
 	// [ ]: verify if the user has a valid LNURLp endpoint
 	resp["callback"] = fmt.Sprintf("https://ivmanto.com/lnurlp/%s", user)
 
